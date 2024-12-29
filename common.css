@@ -3,6 +3,10 @@
     font-family:"rubik";
     src: url(Rubik-VariableFont_wght.ttf);
 }
+
+body{
+    background-color: rgb(222, 246, 255);
+}
 #link_nav{
     display: flex;
     align-items: center;
