@@ -1,0 +1,19 @@
+.control{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.result_padded{
+    padding: 5px;
+    border: 1px solid black;
+    width: 70px; height: 15px;
+    margin-left: 10px; margin-right: 10px;
+    background-color: white;
+}
+
+.padded{
+    padding: 7px;
+}
