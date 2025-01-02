@@ -1,5 +1,4 @@
 let numbersContainer = document.getElementById("numbers");
-
 let controlsContainer = document.getElementById("controls");
 let creatorContainer = document.getElementById("creator");
 
@@ -41,14 +40,16 @@ let boxContainer = document.createElement("div");
     boxContainer.style.display = "grid";
     boxContainer.style.gridTemplateColumns = "repeat(19, 1fr)";
     boxContainer.style.gap = "5px";
-    boxContainer.style.marginTop = "50px";
+    boxContainer.style.marginTop = "70px";
     document.body.appendChild(boxContainer); 
+    let boxes = [];
 
 
 controlsContainer.appendChild(boxContainer);
 
 function createBoxesForAll(count){
     boxContainer.innerHTML = "";
+    boxes = [];
     for (let i = 0; i < count; i++){
         let box = document.createElement("div");
         let randomNumber = Math.floor(Math.random()*90) + 1;
@@ -65,7 +66,9 @@ function createBoxesForAll(count){
         box.style.backgroundColor = "white"; 
     
         boxContainer.appendChild(box);
+        boxes.push(box);
     }  
+   
 }
 createBoxesForAll(95);
 
