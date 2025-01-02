@@ -3,7 +3,7 @@ let controlsContainer = document.getElementById("controls");
 let creatorContainer = document.getElementById("creator");
 
 let main = document.createElement("main");
-numbersContainer.appendChild(main);
+
 
 let commonBoxContainer = document.createElement("div");
 commonBoxContainer.style.display = "flex";
@@ -32,8 +32,8 @@ howManyNumbersText.style.margin = "30px 10px";
 commonBoxContainer.append(howManyNumbersText);
 commonBoxContainer.append(input);
 commonBoxContainer.append(createButton);
-
 creatorContainer.appendChild(commonBoxContainer);
+
 
 
 let boxContainer = document.createElement("div");
@@ -41,11 +41,10 @@ let boxContainer = document.createElement("div");
     boxContainer.style.gridTemplateColumns = "repeat(19, 1fr)";
     boxContainer.style.gap = "5px";
     boxContainer.style.marginTop = "70px";
-    document.body.appendChild(boxContainer); 
+    numbers.appendChild(boxContainer); 
     let boxes = [];
 
-
-controlsContainer.appendChild(boxContainer);
+numbers.appendChild(boxContainer);
 
 function createBoxesForAll(count){
     boxContainer.innerHTML = "";
@@ -68,7 +67,7 @@ function createBoxesForAll(count){
         boxContainer.appendChild(box);
         boxes.push(box);
     }  
-   
+    
 }
 createBoxesForAll(95);
 
