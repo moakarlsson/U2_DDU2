@@ -42,31 +42,22 @@ let boxContainer = document.createElement("div");
     boxContainer.style.gap = "5px";
     boxContainer.style.marginTop = "70px";
     numbers.appendChild(boxContainer); 
-    let boxes = [];
+    let boxesArray = [];
 
 numbers.appendChild(boxContainer);
 
 function createBoxesForAll(count){
     boxContainer.innerHTML = "";
-    boxes = [];
+    boxesArray = [];
     for (let i = 0; i < count; i++){
         let box = document.createElement("div");
         let randomNumber = Math.floor(Math.random()*90) + 1;
         box.textContent = randomNumber;
-
-        box.style.display = "flex";
-        box.style.justifyContent = "center";
-        box.style.alignItems = "center";
-        box.style.border = "1px solid black";
-        box.style.borderRadius = "10px";
-        box.style.height = "50px";
-        box.style.width = "50px"
-        box.style.fontSize = "16px";
-        box.style.backgroundColor = "white"; 
-    
+        box.classList.add("boxStyle")
         boxContainer.appendChild(box);
-        boxes.push(box);
+        boxesArray.push(box);
     }  
+    
     
 }
 createBoxesForAll(95);
@@ -75,4 +66,5 @@ createButton.addEventListener("click", function(){
     let count = Number(input.value);
     createBoxesForAll(count);
 });
+
 

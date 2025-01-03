@@ -29,3 +29,15 @@ a{
 #link_nav a:hover{
     box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
 }
+
+.boxStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    background-color: white;
+}

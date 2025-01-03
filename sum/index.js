@@ -3,45 +3,58 @@ const sumAllDOM = document.getElementById("sum_Result_All");
 const sumMarkedDOM = document.getElementById("sumResultMarked");
 const resetButton = document.getElementById("reset");
 
-function SumOfAll() {
+function sumOfAll(){
     let totalSum = 0;
-    for (let i = 0; i < boxes.length; i++) {
-        totalSum += Number(boxes[i].textContent);
+    for(let box of boxesArray){
+        totalSum += Number(box.textContent);
     }
-    document.getElementById("sum_Result_All").textContent = totalSum;
+    sumAllDOM.textContent = totalSum;
 }
-createButton.addEventListener("click", function () {
-    let count = Number(input.value);
-    createBoxesForAll(count);
-    SumOfAll(); 
-    ClickEventBoxes();
-});
-
 function sumOfMarked() {
     let markedSum = 0;
-    for (let i = 0; i < boxes.length; i++) {
-        if (boxes[i].classList.contains("marked")) {
-            markedSum += Number(boxes[i].textContent);
+    for (let box of boxesArray) {
+        if (box.classList.contains("marked")) {
+            markedSum += Number(box.textContent);
         }
     }
     sumMarkedDOM.textContent = markedSum;
 }
 
 function ClickEventBoxes() {
-    for (let i = 0; i < boxes.length; i++) {
-        boxes[i].addEventListener("click", function () {
-            boxes[i].classList.toggle("marked"); 
-            sumOfMarked(); 
+    for (let box of boxesArray) {
+        box.addEventListener("click", function () {
+            box.classList.toggle("marked");
+            sumOfMarked();
         });
     }
 }
-resetButton.addEventListener("click" ,function(){
+
+resetButton.addEventListener("click", function () {
+    for (let box of boxesArray) {
+        box.classList.remove("marked");
+        box.style.backgroundColor = "white";
+    }
     sumMarkedDOM.textContent = "";
-    
+});
 
-})
+createButton.addEventListener("click", function () {
+    let count = Number(input.value);
+    createBoxesForAll(count);
+    sumOfAll(); 
+    ClickEventBoxes();
+});
 
-ClickEventBoxes()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
