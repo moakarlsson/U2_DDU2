@@ -35,7 +35,6 @@ function ClickEventBoxes() {
 resetButton.addEventListener("click", function () {
     for (let box of boxesArray) {
         box.classList.remove("marked");
-        box.style.backgroundColor = "white";
     }
     sumMarkedDOM.textContent = "";
 });
