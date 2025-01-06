@@ -3,10 +3,11 @@ const sumAllDOM = document.getElementById("sum_Result_All");
 const sumMarkedDOM = document.getElementById("sumResultMarked");
 const resetButton = document.getElementById("reset");
 //Funktion som räknar ut summan av alla boxar med random nummer i
+
 function sumOfAll(){
     let totalSum = 0;
     for(let box of boxesArray){
-        totalSum += Number(box.textContent);
+        totalSum += parseInt(box.textContent);
     }
     sumAllDOM.textContent = totalSum;
 }
@@ -16,7 +17,7 @@ function sumOfMarked() {
     let markedSum = 0;
     for (let box of boxesArray) {
         if (box.classList.contains("marked")) {
-            markedSum += Number(box.textContent);
+            markedSum += parseInt(box.textContent);
         }
     }
     sumMarkedDOM.textContent = markedSum; 
@@ -40,12 +41,14 @@ resetButton.addEventListener("click", function () {
 });
 //
 createButton.addEventListener("click", function () {
-    let count = Number(input.value);
+    let count = parseInt(input.value);
     createBoxesForAll(count);
     sumOfAll(); 
     ClickEventBoxes();
 });
 
+ClickEventBoxes();
+sumOfAll();
 
 
 

@@ -37,14 +37,17 @@ function createBoxesForAll(count){
         let box = document.createElement("div");
         let randomNumber = Math.floor(Math.random()*99) + 1;
         box.textContent = randomNumber;
-        box.classList.add("boxStyle")
+        box.classList.add("boxStyle");
         boxContainer.appendChild(box);
         boxesArray.push(box);
-    }   
+    }  
+    
 }
 createBoxesForAll(95);
 
 createButton.addEventListener("click", function(){
-    let count = Number(input.value);
+    let count = parseInt(input.value);
     createBoxesForAll(count);
+    clickEventBoxes();  
 });
+
