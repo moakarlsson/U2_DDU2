@@ -21,6 +21,24 @@ randomNumberButton.addEventListener("click", function(){
     }
 });
 
+removeButton.addEventListener("click", function(){
+    let randomNumber = parseInt(newRandomNumberResult.textContent)
+    let countRemoved = 0;
+
+    for (let box of boxesArray) {
+        if (parseInt(box.textContent) === randomNumber) {
+            box.classList.add("removed");
+            box.textContent = "X";
+            countRemoved++;
+        } 
+    }
+    if (countRemoved > 0) {
+        removeResult.textContent = `${randomNumber} removed ${countRemoved} times.`;
+    } else {
+        removeResult.textContent = "Nothing to remove";
+    }
+});
+
 
     
 

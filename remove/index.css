@@ -18,7 +18,14 @@
     border: 1px solid black;
 }
 .matchMarked{
+    background-color: orange !important;
+    color: white;
+}
+.removed{
     background-color: red !important;
     color: white;
+}
+#remove_result{
+    width: 160px;
 }
 
