@@ -23,6 +23,9 @@
 .removed{
     background-color: red !important;
     color: white;
+    
 }
-
+#remove_result{
+    width: 160px;
+}
 

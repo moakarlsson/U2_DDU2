@@ -2,6 +2,7 @@ copiesTextBox = document.getElementById("copies_text");
 resetButton = document.getElementById("reset");
 
 function clickEventBoxes() {
+    console.log("clickEventBoxes-funktionen har anropats"); 
     for (let box of boxesArray){
         box.addEventListener("click", function(){
             let clickedNumber = parseInt(box.textContent);
@@ -29,4 +30,11 @@ resetButton.addEventListener("click", function(){
     }
     copiesTextBox.textContent = "Click on a Number to find copies";
 });
-clickEventBoxes()
+
+
+
+
+
+
+ 
+

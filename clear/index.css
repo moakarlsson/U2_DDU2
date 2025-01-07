@@ -5,16 +5,11 @@
     margin-top: 30px;
 }
 
-.numberDiv:hover{
-    background-color: lightblue;
-    
+.click{
+    background-color: rgb(251 146 60);
 }
 
-.clicked{
-    background-color: lightcoral;
-}
-
-.cleared{
-    background-color: red;
+.mouseover{
+    background-color: rgb(8 145 178);
 }
 

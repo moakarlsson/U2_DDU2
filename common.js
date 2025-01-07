@@ -1,12 +1,17 @@
+
+const creatorContainer = document.getElementById("creator");
+const numbersContainer = document.getElementById("numbers");
+const numberDiv = document.getElementById("numbers");
+const allNumbers = document.getElementById("numbers").children;
+
+let boxesArray = [];
+
 function getRandomNumber() {
     return Math.floor(Math.random()*99) +1;
 }
 
-const creatorContainer = document.getElementById("creator");
-const numbersContainer = document.getElementById("numbers");
-const numberDiv = document.getElementsByClassName("numberDiv")
-
-let boxesArray = [];
+const howManyNumbersText = document.createElement("p");
+howManyNumbersText.textContent = "How Many Numbers In the Grid?";
 
 const input = document.createElement("input");
 input.type = "text";
@@ -18,36 +23,37 @@ input.style.fontSize = "16px";
 
 const createButton = document.createElement ("button");
 createButton.textContent = "Create";
-
-const howManyNumbersText = document.createElement("p");
-howManyNumbersText.textContent = "How Many Numbers In the Grid?";
-
-const commonBoxContainer = document.createElement("div");
-commonBoxContainer.classList.add("flex-center");
-commonBoxContainer.append(howManyNumbersText, input, createButton);
-
-creatorContainer.appendChild(commonBoxContainer);
+const buttonDOM = document.createElement("button");
+createButton.addEventListener("click", function (){    
+    createBoxes(input.value); 
+})
 
 
-const boxContainer = document.createElement("div");
-boxContainer.classList.add("grid-container");
-numbersContainer.appendChild(boxContainer); 
+creatorContainer.append(howManyNumbersText, input, createButton);
+creatorContainer.classList.add("flex-center");
 
-function createBoxesForAll(count){
-    boxContainer.innerHTML = "";
-    boxesArray = [];
+numbersContainer.classList.add("numbers")
+
+function createBoxes(count){
+    numbersContainer.innerHTML = "";
     for (let i = 0; i < count; i++){
-        const box = document.createElement("div");
-        const randomNumber = getRandomNumber ();
-        box.textContent = randomNumber;
-        box.classList.add("numberDiv");
-        boxContainer.appendChild(box);
-        boxesArray.push(box);
+        const numberDiv = document.createElement("div");
+        let randomNumber = getRandomNumber();
+        numberDiv.textContent = randomNumber;
+        numberDiv.classList.add("numberDiv");
+        numbersContainer.appendChild(numberDiv);
+       
     }     
 }
-createBoxesForAll(95);
+createBoxes(95);
 
-createButton.addEventListener("click", function(){
-    let count = parseInt(input.value);
-    createBoxesForAll(count); 
-});
+
+
+
+
+
+
+
+
+
+

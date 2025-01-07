@@ -3,6 +3,7 @@
     font-family:"rubik";
     src: url(Rubik-VariableFont_wght.ttf);
 }
+
 body{
     background-color: rgb(222, 246, 255);
 }
@@ -29,7 +30,7 @@ a{
     box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
 }
 
-.numberDiv{
+.numberDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +42,13 @@ a{
     background-color: white;
 }
 
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr); 
+    gap: 5px;
+    margin-top: 70px;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
@@ -48,12 +56,6 @@ a{
     gap: 10px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(19, 1fr);
-    gap: 5px;
-    margin-top: 70px;
-}
 
 .box {
     display: flex;
