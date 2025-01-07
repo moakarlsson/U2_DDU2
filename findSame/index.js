@@ -29,4 +29,4 @@ resetButton.addEventListener("click", function(){
     }
     copiesTextBox.textContent = "Click on a Number to find copies";
 });
-
+clickEventBoxes()

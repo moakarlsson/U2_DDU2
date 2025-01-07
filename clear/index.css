@@ -1,0 +1,20 @@
+.control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.numberDiv:hover{
+    background-color: lightblue;
+    
+}
+
+.clicked{
+    background-color: lightcoral;
+}
+
+.cleared{
+    background-color: red;
+}
+

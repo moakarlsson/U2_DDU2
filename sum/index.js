@@ -45,10 +45,28 @@ createButton.addEventListener("click", function () {
     createBoxesForAll(count);
     sumOfAll(); 
     ClickEventBoxes();
+   
 });
 
-ClickEventBoxes();
 sumOfAll();
+ClickEventBoxes();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
