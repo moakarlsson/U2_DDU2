@@ -5,11 +5,13 @@
     margin-top: 30px;
 }
 
-.click{
-    background-color: rgb(251 146 60);
+.hover{
+    background-color: orange
 }
-
-.mouseover{
-    background-color: rgb(8 145 178);
+.click{
+    background-color: lightcoral;
+}
+.cleared{
+    background-color: red;
 }
 

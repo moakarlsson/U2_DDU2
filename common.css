@@ -30,7 +30,8 @@ a{
     box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
 }
 
-.numberDiv {
+
+.numberDiv{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +40,6 @@ a{
     height: 50px;
     width: 50px;
     font-size: 16px;
-    background-color: white;
 }
 
 .numbers {
@@ -54,19 +54,6 @@ a{
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-    background-color: white;
 }
 
 p {

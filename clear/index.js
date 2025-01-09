@@ -1,25 +1,44 @@
 const clearButton = document.getElementById("clearedButton");
-
 function clearBoxes() {
+    // Gå igenom alla boxar i boxesArray
     for (let box of boxesArray) {
-        box.addEventListener("click", function () {
-            if (box.classList.contains("marked")) {
-                box.classList.add("clicked");
+        box.addEventListener("mouseover", function (){
+            box.classList.add("hover");  
+        });
+
+        box.addEventListener("click", function (){
+            if (box.classList.contains("hover")) {  
+                box.classList.add("click");
+                box.textContent = "";
+                 
             }
+        });
+        box.addEventListener("mouseout", function (){
+            box.classList.add("cleared");
+            box.textContent = "";  
         });
     }
 }
 
-clearButton.addEventListener("click", function () {
+clearButton.addEventListener("click", function (){
     for (let box of boxesArray) {
-        if (box.classList.contains("clicked")) {
-            box.classList.add("cleared");
-            const newNumber = getRandomNumber();
-            box.textContent = newNumber;
-            box.classList.remove("clicked");
+        if (box.classList.contains("cleared")){
+            box.textContent = getRandomNumber();
+            box.style.backgroundColor = "lightblue";
         }
     }
 });
+
+createButton.addEventListener("click", function(){
+    clearBoxes();
+});
+
+clearBoxes();
+
+
+
+
+
 
 
 

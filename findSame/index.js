@@ -23,13 +23,16 @@ function clickEventBoxes() {
         });
     }
 }
-
 resetButton.addEventListener("click", function(){
     for (let box of boxesArray){
         box.classList.remove("matched");
     }
     copiesTextBox.textContent = "Click on a Number to find copies";
 });
+
+createButton.addEventListener("click", function(){
+    clickEventBoxes();
+})
 
 
 

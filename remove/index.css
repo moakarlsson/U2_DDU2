@@ -17,11 +17,11 @@
     border: 1px solid black;
 }
 .matchMarked{
-    background-color: orange !important;
+    background-color: orange;
     color: white;
 }
 .removed{
-    background-color: red !important;
+    background-color: red;
     color: white;
     
 }

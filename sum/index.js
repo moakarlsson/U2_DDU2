@@ -40,16 +40,13 @@ resetButton.addEventListener("click", function () {
     sumMarkedDOM.textContent = "";
 });
 //
-createButton.addEventListener("click", function () {
-    let count = parseInt(input.value);
-    createBoxesForAll(count);
-    sumOfAll(); 
+createButton.addEventListener("click", function (){
+    sumOfAll();
     ClickEventBoxes();
-   
 });
 
-sumOfAll();
-ClickEventBoxes();
+
+
 
 
 
