@@ -1,4 +1,4 @@
-const addUpTo = document.querySelector("input"); 
+const addUpTo = document.getElementById("addUpToInput"); 
 const cellButton = document.getElementById("new_number_button");
 
 cellButton.addEventListener("click", function(){
@@ -7,11 +7,12 @@ cellButton.addEventListener("click", function(){
     let foundPair = false;
 
     for (const box of boxesArray){
+        box.classList.remove("markedBox");
         box.style.backgroundColor = "";
     }
 
-    for (const numberBox of boxesArray){
-        for (const numberBox2 of boxesArray) {
+    for(let numberBox of boxesArray){
+        for (let numberBox2 of boxesArray) {
             if (numberBox === numberBox2) continue;
 
             const value1 = parseInt(numberBox.textContent);
@@ -27,3 +28,4 @@ cellButton.addEventListener("click", function(){
         if (foundPair) break;
     }
 });
+
