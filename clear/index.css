@@ -5,10 +5,11 @@
     margin-top: 30px;
 }
 
-.hover{
-    background-color: orange
+.hover:hover{
+    background-color: orange;
+
 }
-.click{
+.click:hover{
     background-color: lightcoral;
 }
 .cleared{
