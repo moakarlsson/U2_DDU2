@@ -1,6 +1,6 @@
 const clearButton = document.getElementById("clearedButton");
-function clearBoxes() {
-    // Gå igenom alla boxar i boxesArray
+
+function clearBoxes(){
     for (let box of boxesArray) {
         box.addEventListener("mouseover", function (){
             box.classList.add("hover");  
@@ -14,8 +14,10 @@ function clearBoxes() {
             }
         });
         box.addEventListener("mouseout", function (){
-            box.classList.add("cleared");
-            box.textContent = "";  
+            if (box.classList.contains("click")){
+                box.classList.add("cleared");
+                box.textContent = ""; 
+            } 
         });
     }
 }
@@ -32,7 +34,6 @@ clearButton.addEventListener("click", function (){
 createButton.addEventListener("click", function(){
     clearBoxes();
 });
-
 clearBoxes();
 
 

@@ -30,7 +30,6 @@ a{
     box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
 }
 
-
 .numberDiv{
     display: flex;
     justify-content: center;
@@ -40,13 +39,14 @@ a{
     height: 50px;
     width: 50px;
     font-size: 16px;
-}
 
-.numbers {
+}
+.numbers{
     display: grid;
     grid-template-columns: repeat(19, 1fr); 
     gap: 5px;
     margin-top: 70px;
+    margin-left: 10px; margin-right: 10px;
 }
 
 .flex-center {
@@ -61,5 +61,6 @@ p {
 }
 button{
     padding: 5px;
+    height: 45px;
 }
 

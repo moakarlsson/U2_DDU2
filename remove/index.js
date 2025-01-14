@@ -10,7 +10,7 @@ randomNumberButton.addEventListener("click", function(){
         if (box.classList.contains("matchMarked")) {
             box.classList.remove("matchMarked");
         }
-        if (parseInt(box.textContent)=== randomNumber){
+        if (parseInt(box.textContent) === randomNumber){
             box.classList.add("matchMarked");
         }
     }
@@ -19,7 +19,6 @@ randomNumberButton.addEventListener("click", function(){
 removeButton.addEventListener("click", function(){
     let randomNumber = parseInt(newRandomNumberResult.textContent)
     let countRemoved = 0;
-
     for (let box of boxesArray) {
         if (parseInt(box.textContent) === randomNumber) {
             box.classList.add("removed");
