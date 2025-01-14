@@ -39,7 +39,6 @@ a{
     height: 50px;
     width: 50px;
     font-size: 16px;
-
 }
 .numbers{
     display: grid;
@@ -62,5 +61,9 @@ p {
 button{
     padding: 5px;
     height: 45px;
+}
+
+.otherLinks{
+    background-color: lightcyan;
 }
 

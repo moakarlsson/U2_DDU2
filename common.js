@@ -49,7 +49,7 @@ function createBoxes(count){
         boxesArray.push(numberDiv);
     }     
 }
-createBoxes(95);
+
 
 
 
