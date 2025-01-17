@@ -1,5 +1,4 @@
 const clearButton = document.getElementById("clearedButton");
-
 function clearBoxes(){
     for (let box of boxesArray) {
         box.addEventListener("mouseover", function (){
