@@ -6,13 +6,12 @@
 }
 
 .hover:hover{
-    background-color: orange;
+    background-color: skyblue;
 
 }
 .click:hover{
-    background-color: lightcoral;
+    background-color: orange;
 }
 .cleared{
     background-color: red;
 }
-

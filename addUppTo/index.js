@@ -6,13 +6,13 @@ cellButton.addEventListener("click", function(){
     if (isNaN(targetValue)) return;
     let foundPair = false;
 
-    for (const box of boxesArray){
+    for (let box of boxesArray){
         box.classList.remove("markedBox");
         box.style.backgroundColor = "";
     }
 
     for(let numberBox of boxesArray){
-        for (let numberBox2 of boxesArray) {
+        for (let numberBox2 of boxesArray){
             if (numberBox === numberBox2) continue;
 
             const value1 = parseInt(numberBox.textContent);

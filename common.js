@@ -10,7 +10,7 @@ const homeButton = document.createElement("a");
 homeButton.href = "../index.html";
 homeButton.textContent = "Home";
 linkDiv.appendChild(homeButton);
-document.body.insertBefore(linkDiv, document.body.firstChild);
+document.body.insertBefore(linkDiv,document.body.firstChild);
 
 function getRandomNumber() {
     return Math.floor(Math.random()*99)+1;
